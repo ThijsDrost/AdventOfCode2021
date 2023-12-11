@@ -1,5 +1,5 @@
 use std::fs;
-use std::collections::{BinaryHeap, HashSet};
+use std::collections::HashSet;
 
 pub(crate) fn day9() {
     let file = fs::read_to_string("day 9/input.txt").expect("Could not read file");
