@@ -38,7 +38,7 @@ pub(crate) fn day12() {
         }
     }
     println!("Day 12, part 1: {}", find_path(&nodes, "start".to_string(), "end".to_string(), HashSet::from(["start".to_string()])));
-    println!("Day 12, part 1: {}", find_path2(&nodes, "start".to_string(), "end".to_string(),
+    println!("Day 12, part 2: {}", find_path2(&nodes, "start".to_string(), "end".to_string(),
                                               HashSet::from(["start".to_string()]), false,
                                               vec!["start".to_string()], HashSet::new()));
 }

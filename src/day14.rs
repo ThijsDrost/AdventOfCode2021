@@ -1,5 +1,5 @@
 use std::fs;
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap};
 
 pub(crate) fn day14() {
     let file = fs::read_to_string("day 14/input.txt").expect("Could not read file");
@@ -34,13 +34,13 @@ pub(crate) fn day14() {
             *new_polymer.get_mut(&*connections.1.to_vec()).unwrap() += value;
         }
 
-        let (values, num) = get_num(&new_polymer, polymer[0]);
+        let (_, num) = get_num(&new_polymer, polymer[0]);
         polymer_values = new_polymer;
         if index == 10 {
             println!("Day 14, part 1: {}", num);
         }
         if index == 40 {
-            println!("Day 14, part 1: {}", num);
+            println!("Day 14, part 2: {}", num);
         }
     }
 }

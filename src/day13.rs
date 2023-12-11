@@ -19,7 +19,7 @@ pub(crate) fn day13() {
         .map(|&x| x.chars().collect::<Vec<_>>())
         .map(|x| (x[11], x[13..x.len()].iter().rev().enumerate().map(|(index, c)| c.to_digit(10).unwrap()*10u32.pow(index as u32)).sum::<u32>()))
         .collect::<Vec<_>>();
-    for (fold_dir, fold_loc) in folds.iter() {
+    for (i, (fold_dir, fold_loc)) in folds.iter().enumerate() {
         let mut index = 0;
         match fold_dir {
             'x' => {
@@ -36,7 +36,10 @@ pub(crate) fn day13() {
             }
         }
         let dots_set = dots.iter().collect::<HashSet<_>>();
-        println!("{:?}", dots_set.len());
+        if i == 1{
+            println!("Day 13, part 1: {:?}", dots_set.len());
+        }
+
     }
     let x_max = dots.iter().map(|x| x[0]).max().unwrap();
     let y_max = dots.iter().map(|x| x[1]).max().unwrap();
@@ -44,6 +47,7 @@ pub(crate) fn day13() {
     for dot in dots.iter() {
         grid[dot[1] as usize][dot[0] as usize] = '#';
     }
+    println!("Day 13, part 2:");
     for row in grid.iter() {
         for char in row.iter() {
             print!("{}", char);
