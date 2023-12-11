@@ -55,10 +55,10 @@ pub(crate) fn day9() {
         }
     }
 
-    println!("{:?}", flat_loc);
-    println!("{:?}", max_basins);
-    println!("Day 8, part 1: {}", values);
-    println!("Day 8, part 2: {:?}", max_basins[0]*max_basins[1]*max_basins[2]);
+    // println!("{:?}", flat_loc);
+    // println!("{:?}", max_basins);
+    println!("Day 9, part 1: {}", values);
+    println!("Day 9, part 2: {:?}", max_basins[0]*max_basins[1]*max_basins[2]);
 
 }
 
