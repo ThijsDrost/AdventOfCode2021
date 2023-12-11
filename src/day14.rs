@@ -1,5 +1,5 @@
 use std::fs;
-use std::collections::HashMap};
+use std::collections::HashMap;
 
 pub(crate) fn day14() {
     let file = fs::read_to_string("day 14/input.txt").expect("Could not read file");
